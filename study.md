@@ -31,7 +31,7 @@ In your own words, define what the responsibilities of the model layer are in
 Rails.
 
 ```md
-<!-- your answer here -->
+Modles are ruby classes. The model takes methods passed from the controller and preforms tasks based on the request. The model then passes the information back to the controler which sends the information back to its next location (view, server, etc.. ).
 ```
 
 ## Define Controller Responsiblities
@@ -40,7 +40,7 @@ In your own words, define what the responsibilities of the controller layer are
 in Rails.
 
 ```md
-<!-- your answer here -->
+The controler takes information passed to it from the server and determines the appropriate methods to pass to the model or the view and then sends the end result back to the server.
 ```
 
 ## Define Router Responsiblities
@@ -48,7 +48,7 @@ in Rails.
 In your own words, define what the router does in Rails.
 
 ```md
-<!-- your answer here -->
+The router takes incoming url from the server and determines which actions to send which controller.
 ```
 
 ## The Request-Response Cycle in Rails
@@ -57,5 +57,5 @@ Starting with a client making a GET request to a particular URL, describe how
 the parts of Rails interact to produce and send a response.
 
 ```md
-<!-- your answer here -->
+Browser issues a GET request which is sent to the server, the server sends the request to the rails router which parses the url to determine which controller to use for the GET. The controler issues methods to send to the model. The model uses this informtion to interact with the database and sends the relevant information to the controler. The controler then uses this updated information to interact with the view layer. The view layer then sends back the appropriate information back to the controller. The information finally passes all of this back to the server which then sends the relevant response back to the browser. 
 ```
